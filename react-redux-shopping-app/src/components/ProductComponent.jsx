@@ -1,27 +1,30 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React from "react";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 const ProductComponent = () => {
-    const products = useSelector((state) => state.allProductsReducer.products);
-    // const {id, title} = products[0]
-    console.log(products)
-
-    return(
-        <>
-        <div className='four column wide'>
-            <div className='ui link cards'>
-                <div className='card'>
-                    <div className='image'></div>
-                    <div className='content'>
-                        {/* <div className='header'>{title}</div> */}
-                    </div>
-                </div>
-
+  const products = useSelector((state) => state.allProductsReducer.products);
+  const renderList = products.map((product) => {
+    const { id, title, price, image, category } = product;
+    return (
+      <div className="productContainer" key={id}>
+        <Link to={`/product/${id}`} className="productLink">
+          <div class="ui card" id="productCard">
+            <div className="productImage">
+              <img src={image} alt={title} />
             </div>
-            
-        </div>
-        </>
-    )
-}
+            <div className="productInfo">
+              <div className="productName">{title}</div>
+              <div className="productPrice">$ {price}</div>
+              <div className="productCategory">{category}</div>
+            </div>
+          </div>
+        </Link>
+      </div>
+    );
+  });
+
+  return <>{renderList}</>;
+};
 
 export default ProductComponent;

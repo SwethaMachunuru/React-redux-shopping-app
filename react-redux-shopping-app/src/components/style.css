@@ -1,0 +1,78 @@
+#headerContainer {
+    display: flex;
+    justify-content: center; /* Horizontally center the contents */
+    align-items: center; /* Vertically center the contents */
+    height: auto;
+    padding: 20px;
+}
+
+.headerText {
+    text-align: left; /* Align text to the left */
+}
+
+
+.productDetailCategory {
+    height: auto;
+    width: 50%;
+    border: 1px solid grey;
+    margin: auto;
+    background-color:antiquewhite;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#productsList {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to multiple lines */
+    justify-content: center; /* Horizontally center items */
+    padding: 20px 0; /* Add padding for spacing */
+    margin-top: 80px;
+}
+
+  
+  .productContainer {
+    width: 250px; /* Fixed width */
+    height: 350px; /* Fixed height */
+    margin-bottom: 20px; /* Add margin between products */
+  }
+
+  .productLink {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  #productCard {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd; /* Border for the product card */
+  }
+  
+  .productImage {
+    flex: 1; /* Take remaining space */
+    overflow: hidden; /* Hide overflowing image */
+  }
+  
+  .productImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio */
+  }
+  
+  .productInfo {
+    padding: 10px;
+  }
+  
+  .productName {
+    font-weight: bold;
+  }
+  
+  .productPrice {
+    color: #666;
+  }
+  
+  .productCategory {
+    color: #999;
+  }
+  

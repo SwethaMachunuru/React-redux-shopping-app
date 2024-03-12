@@ -1,7 +1,7 @@
 import "./App.css";
 import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import 'semantic-ui-css/semantic.min.css';
 import ProductList from "./components/ProductList";
 import ProductDetails from "./components/ProductDetails";
 

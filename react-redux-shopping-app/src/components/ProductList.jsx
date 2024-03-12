@@ -22,8 +22,7 @@ const ProductList = () => {
     console.log("Producst:", products)
    
     return(
-        <div className='ui grid container'>
-            {/* <h1>Product List</h1> */}
+        <div className='ui grid container' id='productsList'>
             <ProductComponent/>
         </div>
     )
